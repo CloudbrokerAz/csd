@@ -16,7 +16,6 @@ inputs:
     type: string
     title: Region
     default: region:sydney
-    $dynamicEnum: /data/vro-actions/cmbu/returnAvailableRegions?platform={{platform}}
   flavor:
     type: string
     default: medium
@@ -41,7 +40,6 @@ inputs:
     type: string
     default: function:public
     title: Workload Type
-    $dynamicEnum: /data/vro-actions/cmbu/returnWorkloadTypes?platform={{platform}}
   applications:
     type: string
     default: moad
@@ -115,7 +113,7 @@ resources:
         - network: ${resource.App_Network.id}
           assignment: '${input.platform == "platform:vsphere" ? "static" : "dynamic"}'
       attachedDisks: []
-      count: 3
+      count: 2
   Database:
     type: Cloud.Machine
     dependsOn:
