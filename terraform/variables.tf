@@ -6,7 +6,7 @@ variable vra_refresh_token {
   type = string
 }
 
-variable vra_blueoprintId {
+variable vra_blueprintId {
     type = string
 }
 
